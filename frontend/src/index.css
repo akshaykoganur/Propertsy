@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=Oswald:wght@300;400&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*Common styling*/
+.card {
+  box-shadow: 0 0 2px gray;
+  background-color: aquamarine;
+}
+
+.authentication .card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(149, 149, 228);
+  height: 40px;
+  padding: 5px 20px;
+  margin-left: -30px;
+  border-bottom-left-radius: 10px;
+}
+
+.normal-text{
+  font-size: 1rem;
+}
+
+.primary-button{
+  font-size: 1rem;
+  height: 40px;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(154, 154, 178) !important;
+}
+
+.anchor{
+  text-decoration: underline;
+}
+
+/*Antd override*/
+
+input{
+  border: 2px solid orange !important;
+  height: 40px !important;  /*!important is written to override*/
+}
+
+input:focus{
+  border: 1px solid !important;
+}
+
+/* authentication pages*/
+
+.authentication {
+  height: 100vh;
+  background-color: rgba(154, 35, 165, 0.728);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication-form{
+  width: 400px;
+}
