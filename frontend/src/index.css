@@ -55,7 +55,7 @@ input:focus{
 
 .authentication {
   height: 100vh;
-  background-color: rgba(154, 35, 165, 0.728);
+  background-image: linear-gradient(to right,blueviolet,violet);
   display: grid;
   align-items: center;
   justify-content: center;
