@@ -14,6 +14,9 @@ function Register() {
                     <Form.Item label='Email'>
                         <Input name='email' placeholder='Email'/>
                     </Form.Item>
+                    <Form.Item label='Contactno' >
+                        <Input name='contactno' placeholder='contactno'/>
+                    </Form.Item>
                     <Form.Item label='Password'>
                         <Input name='password' placeholder='Password' type='password'/>
                     </Form.Item>
