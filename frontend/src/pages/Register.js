@@ -14,14 +14,14 @@ function Register() {
     )
 
     const submitData = async(e) => {
-        const {name, email, password} = user;
+        const {name, email, contactno, password} = user;
         const res = await fetch("http://localhost:5000/api/user/register", {
             method:"POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name, email, password
+                name, email, contactno, password
             })
         });
 
