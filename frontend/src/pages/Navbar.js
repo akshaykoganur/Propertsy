@@ -1,10 +1,16 @@
 import React from "react";
+import toast from 'react-hot-toast';
 
 function Navbar() {
+  const logout = async (e) => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userEmail");
+    toast.success("Logout Successful");
+  };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-info pb-2 pr-1">
+    <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
       <a className="navbar-brand fs-5" href="/">
-        Proptify
+        Propertsy
       </a>
       <button
         className="navbar-toggler"
@@ -41,7 +47,20 @@ function Navbar() {
             </a>
           </li>
         </ul>
-        
+
+        {localStorage.getItem("token") ? (
+          <div className="d-flex">
+            <a className="btn text-secondary mx-1" href="/profile">
+              Profile
+            </a>
+            <button className="btn text-danger mx-1" onClick={logout}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+        {!localStorage.getItem("token") ? (
           <div className="d-flex">
             <a className="btn text-secondary mx-1" href="/login">
               Login
@@ -50,7 +69,10 @@ function Navbar() {
               Register
             </a>
           </div>
-    
+        ) : (
+          ""
+        )}
+
       </div>
     </nav>
   );

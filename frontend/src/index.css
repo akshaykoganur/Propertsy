@@ -64,3 +64,33 @@ input:focus{
 .authentication-form{
   width: 400px;
 }
+
+.home{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  display: flex;
+  background-image: linear-gradient(to right,blueviolet,violet);
+}
+
+.homebox{
+  width: 40%;
+  padding-left: 20%;
+  color: rgb(155, 79, 79);
+}
+
+.homelink{
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: aquamarine;
+  padding: 1%;
+}
+
+.homecard{
+  height: 160px;
+  border: 2px solid black;
+  
+}
+
+.homeboxtext{
+  font-size: 30px;
+}
