@@ -5,8 +5,16 @@ const sellSchema = new mongoose.Schema({
         type: String,
         required: true    
     },
+    image:{
+        type: String,
+        required: true
+    },
     price: {
-        type: Integer,
+        type: String,
+        required: true
+    },
+    age: {
+        type: String,
         required: true
     },
     street: {
@@ -26,7 +34,7 @@ const sellSchema = new mongoose.Schema({
         required: true
     },
     ownerContact: {
-        type: Integer,
+        type: String,
         required: true
     },
     ownerEmail: {

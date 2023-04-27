@@ -9,6 +9,16 @@ app.use(express.json());
 const userRoute = require('./routes/userRoute');
 app.use('/api/user', userRoute);
 
+const sellRoute = require('./routes/sellRoute');
+app.use('/api', sellRoute);
+
+const rentRoute = require('./routes/rentRoute');
+app.use('/api', rentRoute);
+
+
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb', extended: true}));
+
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(

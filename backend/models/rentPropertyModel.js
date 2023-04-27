@@ -5,8 +5,16 @@ const rentSchema = new mongoose.Schema({
         type: String,
         required: true    
     },
-    price: {
-        type: Integer,
+    image:{
+        type: String,
+        required: true
+    },
+    rent: {
+        type: String,
+        required: true
+    },
+    deposit: {
+        type: String,
         required: true
     },
     street: {
@@ -26,7 +34,7 @@ const rentSchema = new mongoose.Schema({
         required: true
     },
     ownerContact: {
-        type: Integer,
+        type: String,
         required: true
     },
     ownerEmail: {
@@ -37,6 +45,6 @@ const rentSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const rentPropertyModel = mongoose.model('sell', rentSchema);
+const rentPropertyModel = mongoose.model('rent', rentSchema);
 
 module.exports = rentPropertyModel;

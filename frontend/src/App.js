@@ -7,6 +7,9 @@ import Navbar from "./pages/Navbar";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import Rent from "./pages/Rent";
+import SellForm from "./pages/SellForm";
+import RentForm from "./pages/RentForm";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/rent" element={<Rent />} />
           <Route path="/login" element={<Signin />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/submitSell" element={<SellForm />} />
+          <Route path="/submitRent" element={<RentForm />} />
         </Routes>
       </BrowserRouter>
   );
