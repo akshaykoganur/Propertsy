@@ -5,8 +5,6 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const url = "http://localhost:5000/upload"
-
 function SellForm() {
 
   const [credentials, setCredentials] = useState({ name: "", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
@@ -17,7 +15,7 @@ function SellForm() {
     try {
       console.log(values);
       const response = await axios.post("http://localhost:5000/api/sell", values);
-      console.log(values);
+      //console.log(values);
       if (response.data.success) {
         navigate("/profile");
         toast("Succeesful");
@@ -34,7 +32,7 @@ function SellForm() {
       const file = e.target.files[0];
       const base64 = await convertToBase64(file);
       console.log(base64)
-      setCredentials({ ...credentials, image: base64 })
+      setCredentials({ ...credentials, [e.target.name]: base64 })
     }
     else{
       setCredentials({ ...credentials, [e.target.name]: e.target.value })

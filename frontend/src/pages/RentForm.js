@@ -5,18 +5,16 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const url = "http://localhost:5000/upload"
-
 function SellForm() {
 
-  const [credentials, setCredentials] = useState({ name: "", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
+  const [credentials, setCredentials] = useState({ name: "", image: "", rent: "", deposit:"", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
 
 
   const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
       console.log(values);
-      const response = await axios.post("http://localhost:5000/api/sell", values);
+      const response = await axios.post("http://localhost:5000/api/rent", values);
       console.log(values);
       if (response.data.success) {
         navigate("/profile");
