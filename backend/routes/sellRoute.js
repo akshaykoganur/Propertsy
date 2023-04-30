@@ -5,8 +5,8 @@ const bcrypt = require('bcryptjs');
 
 router.post('/sell', async (req, res) => {
     try{
-        const newsell = new Sell(req.body);  //create new user
-        await newsell.save();     //save new user
+        const newSell = await Sell.create(req.body);
+        newSell.save(); //save new user
         res.status(200).send({message: "Property added", success: true});
     }
     catch(error){

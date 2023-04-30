@@ -11,10 +11,10 @@ function SellForm() {
 
 
   const navigate = useNavigate();
-  const onFinish = async (values) => {
+  const onFinish = async () => {
     try {
-      console.log(values);
-      const response = await axios.post("http://localhost:5000/api/sell", values);
+      console.log(credentials);
+      const response = await axios.post("http://localhost:5000/api/sell", credentials);
       //console.log(values);
       if (response.data.success) {
         navigate("/profile");
@@ -32,11 +32,14 @@ function SellForm() {
       const file = e.target.files[0];
       const base64 = await convertToBase64(file);
       console.log(base64)
-      setCredentials({ ...credentials, [e.target.name]: base64 })
+      //console.log(e.target.value)
+      setCredentials({ ...credentials, image: base64 })
     }
     else{
+      //console.log(e.target.value)
       setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
+    //console.log(credentials.image)
   }
 
   function convertToBase64(file) {
