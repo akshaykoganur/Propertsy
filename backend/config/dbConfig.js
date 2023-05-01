@@ -14,7 +14,7 @@ connection.on('connected', () => {
             global.sellData = data;
             console.log(data);
         }
-        console.log('hi');
+        //console.log('hi');
     })
 });
 
