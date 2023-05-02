@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const sellSchema = new mongoose.Schema({
+let sellSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true    
@@ -45,6 +45,8 @@ const sellSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const sellPropertyModel = mongoose.model('sell', sellSchema);
+let sellPropertyModel = mongoose.model('sell', sellSchema);
+
+//console.log(sellPropertyModel.toJSON());
 
 module.exports = sellPropertyModel;

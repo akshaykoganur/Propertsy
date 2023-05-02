@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const sellModel = require('../models/sellPropertyModel')
 
-router.get('/sellData', async(req,res) => {
+router.get('/buyData', async(req,res) => {
     try{
-        console.log(global.sellData);
-        res.send(global.sellData);
+        const buyData = await sellModel.find({});
+        //console.log(buyData);
+        res.send(buyData);
     }
     catch(error){
         console.error(error.message);

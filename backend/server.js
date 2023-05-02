@@ -5,7 +5,7 @@ app.use(cors());
 require('dotenv').config();
 const dbconfig = require('./config/dbConfig');
 
-const displaySell = require('./routes/displaySell');
+const displayBuy = require('./routes/displayBuy');
 
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true , parameterLimit:50000}));
@@ -19,7 +19,7 @@ app.use('/api', sellRoute);
 const rentRoute = require('./routes/rentRoute');
 app.use('/api', rentRoute);
 
-app.use('/api', displaySell);
+app.use('/api', displayBuy);
 
 
 app.use((req, res, next) => {
