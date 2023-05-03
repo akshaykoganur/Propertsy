@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Rent = require('../models/sellPropertyModel');
+const Rent = require('../models/rentPropertyModel');
 const bcrypt = require('bcryptjs');
 
 router.post('/rent', async (req, res) => {

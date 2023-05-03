@@ -7,15 +7,15 @@ import axios from "axios";
 
 function SellForm() {
 
-  const [credentials, setCredentials] = useState({ name: "", image: "", rent: "", deposit:"", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
+  const [credentials, setCredentials] = useState({ name: "", type:"", image: "", rent: "", deposit:"", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
 
 
   const navigate = useNavigate();
-  const onFinish = async (values) => {
+  const onFinish = async () => {
     try {
-      console.log(values);
-      const response = await axios.post("http://localhost:5000/api/rent", values);
-      console.log(values);
+      console.log(credentials);
+      const response = await axios.post("http://localhost:5000/api/rent", credentials);
+      //console.log(values);
       if (response.data.success) {
         navigate("/profile");
         toast("Succeesful");
@@ -32,11 +32,14 @@ function SellForm() {
       const file = e.target.files[0];
       const base64 = await convertToBase64(file);
       console.log(base64)
+      //console.log(e.target.value)
       setCredentials({ ...credentials, image: base64 })
     }
     else{
+      //console.log(e.target.value)
       setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
+    //console.log(credentials.image)
   }
 
   function convertToBase64(file) {
@@ -57,6 +60,9 @@ function SellForm() {
       <Form layout="vertical" onFinish={onFinish}>
         <Form.Item label="Name" name="name">
           <Input placeholder="Name" name='name' value={credentials.name} onChange={onChange} />
+        </Form.Item>
+        <Form.Item label="Type" name="type">
+          <Input placeholder="Type" name='type' value={credentials.type} onChange={onChange} />
         </Form.Item>
         <Form.Item label="Image" name="image">
           <Input
