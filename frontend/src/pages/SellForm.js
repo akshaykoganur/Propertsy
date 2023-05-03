@@ -7,7 +7,7 @@ import axios from "axios";
 
 function SellForm() {
 
-  const [credentials, setCredentials] = useState({ name: "", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
+  const [credentials, setCredentials] = useState({ name: "", type:"", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
 
 
   const navigate = useNavigate();
@@ -60,6 +60,9 @@ function SellForm() {
       <Form layout="vertical" onFinish={onFinish}>
         <Form.Item label="Name" name="name">
           <Input placeholder="Name" name='name' value={credentials.name} onChange={onChange} />
+        </Form.Item>
+        <Form.Item label="Type" name="type">
+          <Input placeholder="Type" name='type' value={credentials.type} onChange={onChange} />
         </Form.Item>
         <Form.Item label="Image" name="image">
           <Input

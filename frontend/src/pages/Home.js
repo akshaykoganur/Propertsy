@@ -9,7 +9,7 @@ import '../index.css'
 function Home() {
   return (
     <div>
-      <img src={homepic} alt="one" width="100%" height="40%" />
+      <img src={homepic} alt="one" width="100%" max-height="40%" />
       <div className='home'>
       <Box className='homebox'>
         <Card variant="outlined" className='homecard'>

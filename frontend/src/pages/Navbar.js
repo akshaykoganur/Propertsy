@@ -36,11 +36,6 @@ function Navbar() {
               Buy
             </a>
           </li>
-          <li className="nav-item">
-            <a className="btn text-secondary mx-1" href="/sell">
-              Sell
-            </a>
-          </li>
           <li className="nav-item active">
             <a className="btn text-secondary mx-1" href="/rent">
               Rent

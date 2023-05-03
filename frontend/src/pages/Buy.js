@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 //import books2 from "./images/books2.jpg";
-import "../App.css";
+import "../index.css";
 import BuyCard from "./BuyCard";
 
 function Buy() {
@@ -24,11 +24,11 @@ function Buy() {
   }, []);
   return (
     <>
-      <div className="container">
+      {/* <div className="container mb-3 fs-3 m-3">
         {dat !== [] ? (
           dat.map((data, idx) => {
             return (
-              <div key={idx} className="row mb-3 fs-3 m-3">
+              <div key={idx} className="row">
                 <div key={idx} className="col-12 col-md-6 col-lg-3">
                   <BuyCard buyProperties={data} />
                 </div>
@@ -38,9 +38,21 @@ function Buy() {
         ) : (
           <div>**</div>
         )}
-      </div>
-      
-      <hr></hr>
+      </div> */}
+
+<div className="container buy mb-3 fs-3 d-flex flex-wrap">
+  {dat !== [] ? (
+    dat.map((data, idx) => {
+      return (
+        <div key={idx} className="col-12 col-md-6 col-lg-3 mx-5">
+          <BuyCard buyProperties={data} />
+        </div>
+      );
+    })
+  ) : (
+    <div>**</div>
+  )}
+</div>
       
     </>
   );
