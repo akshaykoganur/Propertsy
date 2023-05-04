@@ -81,4 +81,23 @@ router.post("/login", async (req, res) => {
     }
   });
 
+  router.post('/profile', async(req,res) => {
+    try {
+      const user = await User.findOne({ email: req.body.email });
+      //user.password = undefined;
+      if (!user) {
+        return res
+          .status(200)
+          .send({ message: "User does not exist", success: false });
+      } else {
+        res.send(user);
+        //console.log(user);
+      }
+    } catch (error) {
+      res
+        .status(500)
+        .send({ message: "Error getting user info", success: false, error });
+    }
+  });
+
 module.exports = router;

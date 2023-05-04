@@ -94,3 +94,8 @@ input:focus{
 .homeboxtext{
   font-size: 30px;
 }
+
+.profile{
+  justify-content: center;
+  align-items: center;
+}
