@@ -9,6 +9,8 @@ import Sell from "./pages/Sell";
 import Rent from "./pages/Rent";
 import SellForm from "./pages/SellForm";
 import RentForm from "./pages/RentForm";
+import ViewSell from "./pages/ViewSell";
+import ViewRent from "./pages/ViewRent";
 import Profile from "./pages/Profile";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/submitSell" element={<SellForm />} />
           <Route path="/submitRent" element={<RentForm />} />
+          <Route path="/viewSell" element={<ViewSell />} />
+          <Route path="/viewRent" element={<ViewRent />} />
         </Routes>
       </BrowserRouter>
   );

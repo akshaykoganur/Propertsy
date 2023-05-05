@@ -6,9 +6,17 @@ import { Typography } from 'antd'
 import { Link } from 'react-router-dom'
 import '../index.css'
 
+
+import toast, { Toaster } from 'react-hot-toast';
+
+
+
 function Home() {
+  const notify = () => toast('Here is your toast.');
   return (
     <div>
+      <button onClick={notify}>Make me a toast</button>
+      <Toaster/>
       <img src={homepic} alt="one" width="100%" max-height="40%" />
       <div className='home'>
       <Box className='homebox'>

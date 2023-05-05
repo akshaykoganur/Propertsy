@@ -24,6 +24,12 @@ app.use('/api', displayBuy);
 
 app.use('/api', displayRent);
 
+const yourRent = require('./routes/YourRent');
+app.use('/api/user', yourRent);
+
+const yourSell = require('./routes/YourSell');
+app.use('/api/user', yourSell);
+
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");

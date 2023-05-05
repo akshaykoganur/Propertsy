@@ -47,6 +47,12 @@ function Profile() {
       <Link to='/submitRent'>
         Rent Properties
       </Link>
+      <Link to='/viewSell'>
+        View Your Properties for Sell
+      </Link>
+      <Link to='/viewRent'>
+        View Your Properties for Rent
+      </Link>
     </div>
   )
 }
