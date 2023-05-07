@@ -34,25 +34,43 @@ function Profile() {
     getProfile();
   }, []);
   return (
-    <div className='profile'>
-      <div className="container buy mb-3 fs-3 d-flex flex-wrap">
+    <div className='profile' style={{ alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+      <div className='profilepageCard' >
+        <div>
+          <div >
 
-        <div className="col-12 col-md-6 col-lg-3 mx-5">
-          <ProfileCard userProfile={dat} />
+            <div >
+              <ProfileCard userProfile={dat} />
+            </div>
+          </div>
         </div>
       </div>
-      <Link to='/submitSell'>
-        Sell Properties
-      </Link>
-      <Link to='/submitRent'>
-        Rent Properties
-      </Link>
-      <Link to='/viewSell'>
-        View Your Properties for Sell
-      </Link>
-      <Link to='/viewRent'>
-        View Your Properties for Rent
-      </Link>
+      <div className='profilegrid'>
+        <div className='profileflex'>
+          <div className='profileroutes'>
+            <Link to='/submitSell'>
+              Sell Properties
+            </Link>
+          </div>
+          <div className='profileroutes'>
+            <Link to='/submitRent'>
+              Rent Properties
+            </Link>
+          </div>
+        </div>
+        <div className='profileflex'>
+          <div className='profileroutes'>
+            <Link to='/viewSell'>
+              View Your Properties for Sell
+            </Link>
+          </div>
+          <div className='profileroutes'>
+            <Link to='/viewRent'>
+              View Your Properties for Rent
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

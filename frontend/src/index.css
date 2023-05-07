@@ -95,7 +95,22 @@ input:focus{
   font-size: 30px;
 }
 
-.profile{
+.profilepageCard{
+  display: grid;
   justify-content: center;
-  align-items: center;
+  padding-right: 15%;
+  background-image: linear-gradient(to right,blueviolet,violet);
+}
+
+.profilegrid{
+  display: grid;
+}
+
+.profileflex{
+  display: flex;
+}
+
+.profileroutes{
+  padding-left: 10%;
+  padding-right: 10%;
 }
