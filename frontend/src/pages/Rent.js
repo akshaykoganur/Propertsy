@@ -5,13 +5,22 @@ import RentCard from "./RentCard";
 
 function Rent() {
   const [dat, setMyArray] = useState([]);
+  const [city, setCity] = useState('');
   //const clicked = async (e) => {
-    //console.log('Hi');
+  //console.log('Hi');
   //}
-  async function getRentProperties() {
+  async function submitData() {
     try {
       let url = "http://localhost:5000/api/rentData";
-      let res = await fetch(url);
+      let res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          city
+        })
+      });
       let data = await res.json();
       console.log(data);
       setMyArray(data);
@@ -19,9 +28,12 @@ function Rent() {
       console.error(err);
     }
   }
-  useEffect(() => {
-    getRentProperties();
-  }, []);
+
+  const changed = async (e) => {
+    let value = e.target.value;
+    setCity(value);
+  }
+
   return (
     <>
       {/* <div className="container mb-3 fs-3 m-3">
@@ -39,6 +51,14 @@ function Rent() {
           <div>**</div>
         )}
       </div> */}
+
+<div class='form-container'>
+        <form class='form' method='POST' onSubmit={submitData}>
+          <label class='form-label' for='city'>City</label>
+          <input class='form-input' type='text' name='city' id='city' value={city} onChange={changed} />
+          <button class='form-button' type='submit'>Search</button>
+        </form>
+      </div>
 
 <div className="container buy mb-3 fs-3 d-flex flex-wrap">
   {dat !== [] ? (

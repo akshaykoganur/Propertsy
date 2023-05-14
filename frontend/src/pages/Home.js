@@ -15,8 +15,6 @@ function Home() {
   const notify = () => toast('Here is your toast.');
   return (
     <div>
-      <button onClick={notify}>Make me a toast</button>
-      <Toaster/>
       <img src={homepic} alt="one" width="100%" max-height="40%" />
       <div className='home'>
       <Box className='homebox'>

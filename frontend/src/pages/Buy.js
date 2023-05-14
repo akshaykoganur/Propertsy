@@ -31,10 +31,10 @@ function Buy() {
     }
   }
 
-  const changed = async(e) => {
+  const changed = async (e) => {
     let value = e.target.value;
     setCity(value);
-}
+  }
 
   return (
     <>
@@ -54,18 +54,14 @@ function Buy() {
         )}
       </div> */}
 
-      <div className="authentication">
-        <div className="authentication-form card p-2">
-          <h1 className='card-title'>Enter City</h1>
-          <Form method="POST" layout='vertical' onFinish={submitData}>
-            <Form.Item label='city' >
-              <Input name='city' placeholder='City' value={city} onChange={changed} />
-            </Form.Item>
-            <Button className='primary-button mt-2 mb-2' htmlType='submit'>REGISTER</Button>
-          </Form>
-
-        </div>
+      <div class='form-container'>
+        <form class='form' method='POST' onSubmit={submitData}>
+          <label class='form-label' for='city'>City</label>
+          <input class='form-input' type='text' name='city' id='city' value={city} onChange={changed} />
+          <button class='form-button' type='submit'>Search</button>
+        </form>
       </div>
+
 
       <div className="container buy mb-3 fs-3 d-flex flex-wrap">
         {dat !== [] ? (
