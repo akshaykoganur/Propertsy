@@ -54,13 +54,13 @@ function Buy() {
         )}
       </div> */}
 
-      <div class='form-container'>
-        <form class='form' method='POST' onSubmit={submitData}>
-          <label class='form-label' for='city'>City</label>
-          <input class='form-input' type='text' name='city' id='city' value={city} onChange={changed} />
-          <button class='form-button' type='submit'>Search</button>
-        </form>
-      </div>
+                <Form method="POST" layout='vertical' onFinish={submitData}>
+                    <Form.Item label='City' >
+                        <Input name='city' placeholder='City' value={city} onChange={changed} />
+                    </Form.Item>
+                    <Button className='primary-button mt-2 mb-2' htmlType='submit'>Submit</Button>
+                </Form>
+                
 
 
       <div className="container buy mb-3 fs-3 d-flex flex-wrap">
