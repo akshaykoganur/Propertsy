@@ -13,6 +13,7 @@ function RentCard(props) {
             <h5 className="card-title">Rs. {props.rentProperties.rent}</h5>
             <h5 className="card-title">{props.rentProperties.city}</h5>
             <h6 className="card-title">{props.rentProperties.street}<span>, {props.rentProperties.locality}</span></h6>
+            <h6 className="card-title">{props.buyProperties.ownerName}<span>, {props.buyProperties.ownerContact}</span></h6>
             <button style={{ fontSize:"1rem"}}>View More..</button>
             {/*<img src={props.rentProperties.image} />*/}
         </div>

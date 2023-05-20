@@ -33,9 +33,10 @@ function ViewSell() {
   }, []);
   return (
     <>
-      <div style={{ alignContent: "center", alignItems: "center" }}>
-        <h1>Total {dat.length} properties listed for sell</h1>
-      </div>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+  <h1>Total {dat.length} properties listed for sell by you</h1>
+</div>
+
       <div className="container buy mb-3 fs-3 d-flex flex-wrap">
         {dat !== [] ? (
           dat.map((data, idx) => {

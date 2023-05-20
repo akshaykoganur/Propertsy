@@ -56,7 +56,8 @@ function SellForm() {
   }
 
   return (
-    <div className="App">
+    
+      <div className="card p-3">
       <Form layout="vertical" onFinish={onFinish}>
         <Form.Item label="Name" name="name">
           <Input placeholder="Name" name='name' value={credentials.name} onChange={onChange} />
@@ -107,8 +108,8 @@ function SellForm() {
         </Link>
 
       </Form>
-
-    </div>
+      </div>
+    
   )
 }
 
