@@ -2,7 +2,7 @@
 import { Button, Form, Input } from "antd";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 function SellForm() {
@@ -104,10 +104,6 @@ function SellForm() {
         <Button className="primary-button my-2 full-width-button" htmlType="submit">
           Submit
         </Button>
-
-        <Link to="/register" className="anchor mt-2">
-          CLICK HERE TO REGISTER
-        </Link>
 
       </Form>
 

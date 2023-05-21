@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button } from 'antd';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import toast from 'react-hot-toast';
-import axios from 'axios';
 
 function Register() {
     const navigate = useNavigate();

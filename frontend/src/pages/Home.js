@@ -7,12 +7,8 @@ import { Link } from 'react-router-dom'
 import '../index.css'
 
 
-import toast, { Toaster } from 'react-hot-toast';
-
-
 
 function Home() {
-  const notify = () => toast('Here is your toast.');
   return (
     <div>
       <img src={homepic} alt="one" width="100%" max-height="40%" />

@@ -32,7 +32,7 @@ function Profile() {
   }
   useEffect(() => {
     getProfile();
-  }, []);
+  });
   return (
     <div className='profile' style={{ alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
       <div className='profilepageCard' >
