@@ -10,7 +10,7 @@ function ViewSell() {
   //}
   async function getBuyProperties() {
     try {
-      let url = "http://localhost:5000/api/user/yourSellData";
+      let url = "https://propertsy-backend.onrender.com/api/user/yourSellData";
       const ownerEmail = localStorage.getItem("userEmail");
       let res = await fetch(url, {
         method: "POST",

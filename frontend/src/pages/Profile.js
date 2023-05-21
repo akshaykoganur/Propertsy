@@ -11,7 +11,7 @@ function Profile() {
   //}
   async function getProfile() {
     try {
-      let url = "http://localhost:5000/api/user/profile";
+      let url = "https://propertsy-backend.onrender.com/api/user/profile";
       const email = localStorage.getItem("userEmail");
       let res = await fetch(url, {
         method: "POST",

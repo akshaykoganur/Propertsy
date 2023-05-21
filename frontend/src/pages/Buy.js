@@ -13,7 +13,7 @@ function Buy() {
   //}
   async function submitData() {
     try {
-      let url = "http://localhost:5000/api/buyData";
+      let url = "https://propertsy-backend.onrender.com/api/buyData";
       let res = await fetch(url, {
         method: "POST",
         headers: {

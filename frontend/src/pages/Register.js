@@ -15,7 +15,7 @@ function Register() {
 
     const submitData = async(e) => {
         const {name, email, contactno, password} = user;
-        const res = await fetch("http://localhost:5000/api/user/register", {
+        const res = await fetch("https://propertsy-backend.onrender.com/api/user/register", {
             method:"POST",
             headers: {
                 "Content-Type": "application/json"
