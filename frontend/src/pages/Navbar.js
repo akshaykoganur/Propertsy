@@ -10,7 +10,7 @@ function Navbar() {
   };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
-      <img src={logopic} style={{maxHeight:"8vh"}}/>
+      <img src={logopic} alt="Logo" style={{maxHeight:"8vh"}}/>
       <button
         className="navbar-toggler"
         type="button"
