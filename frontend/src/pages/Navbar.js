@@ -8,14 +8,15 @@ function Navbar() {
     localStorage.removeItem("userEmail");
     toast.success("Logout Successful");
   };
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
       <img src={logopic} alt="Logo" style={{maxHeight:"8vh"}}/>
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -24,19 +25,19 @@ function Navbar() {
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto me-auto">
-          <li className="nav-item active">
-            <a className="btn text-secondary mx-1" href="/">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <a className="btn text-secondary" href="/">
               Home
             </a>
           </li>
-          <li className="nav-item active">
-            <a className="btn text-secondary mx-1" href="/buy">
+          <li className="nav-item">
+            <a className="btn text-secondary" href="/buy">
               Buy
             </a>
           </li>
-          <li className="nav-item active">
-            <a className="btn text-secondary mx-1" href="/rent">
+          <li className="nav-item">
+            <a className="btn text-secondary" href="/rent">
               Rent
             </a>
           </li>
@@ -44,10 +45,10 @@ function Navbar() {
 
         {localStorage.getItem("token") ? (
           <div className="d-flex">
-            <a className="btn text-secondary mx-1" href="/profile">
+            <a className="btn text-secondary mx-2" href="/profile">
               Profile
             </a>
-            <button className="btn text-danger mx-1" onClick={logout}>
+            <button className="btn text-danger" onClick={logout}>
               Logout
             </button>
           </div>
@@ -56,20 +57,20 @@ function Navbar() {
         )}
         {!localStorage.getItem("token") ? (
           <div className="d-flex">
-            <a className="btn text-secondary mx-1" href="/login">
+            <a className="btn text-secondary mx-2" href="/login">
               Login
             </a>
-            <a className="btn text-secondary mx-1" href="/register">
+            <a className="btn text-secondary mx-2" href="/register">
               Register
             </a>
           </div>
         ) : (
           ""
         )}
-
       </div>
     </nav>
   );
 }
 
 export default Navbar;
+
