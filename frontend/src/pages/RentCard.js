@@ -6,7 +6,7 @@ function RentCard(props) {
         
         <div className="card-body align-text-center">
         <h5 className="card-title" style={{textAlign: 'center'}}>{props.rentProperties.type}<span>, {props.rentProperties.name}</span></h5>
-            <img src={props.rentProperties.image} alt={""} width="250px" height="200px" />
+            <img src={props.rentProperties.image} alt={""} width="230px" height="200px" />
             <h5 className="card-title">Rs. {props.rentProperties.rent}</h5>
             <h5 className="card-title">{props.rentProperties.city}</h5>
             <h6 className="card-title">{props.rentProperties.street}<span>, {props.rentProperties.locality}</span></h6>
