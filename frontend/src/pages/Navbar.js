@@ -1,5 +1,6 @@
 import React from "react";
 import toast from 'react-hot-toast';
+import logopic from '../Images/logo.png';
 
 function Navbar() {
   const logout = async (e) => {
@@ -9,9 +10,7 @@ function Navbar() {
   };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
-      <a className="navbar-brand fs-5" href="/">
-        Propertsy
-      </a>
+      <img src={logopic} style={{maxHeight:"8vh"}}/>
       <button
         className="navbar-toggler"
         type="button"

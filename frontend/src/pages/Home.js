@@ -1,45 +1,42 @@
-import React from 'react'
-import homepic from '../Images/home.jpg'
-import Card from '@mui/material/Card'
-import { Box, CardActions, CardContent } from '@mui/material'
-import { Typography } from 'antd'
-import { Link } from 'react-router-dom'
-import '../index.css'
-
-
+import React from 'react';
+import homepic from '../Images/home1.jpg';
+import Card from '@mui/material/Card';
+import { Box, CardActions, CardContent, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import '../index.css';
 
 function Home() {
   return (
-    <div>
-      <img src={homepic} alt="one" width="100%" max-height="40%" />
-      <div className='home'>
-      <Box className='homebox'>
-        <Card variant="outlined" className='homecard'>
-          <CardContent>
-            <Typography className='homeboxtext'>Buy Property?</Typography>
-          </CardContent>
-          <CardActions sx={{paddingLeft:'30%', paddingTop:'15%'}}>
-            <Link to="/buy" className="homelink">
-              CLICK HERE
-            </Link>
-          </CardActions>
-        </Card>
-      </Box>
-      <Box className='homebox'>
-        <Card variant="outlined" className='homecard'>
-          <CardContent>
-            <Typography className='homeboxtext'>Rent Property?</Typography>
-          </CardContent>
-          <CardActions sx={{paddingLeft:'30%', paddingTop:'15%'}}>
-            <Link to="/rent" className="homelink">
-              CLICK HERE
-            </Link>
-          </CardActions>
-        </Card>
-      </Box>
+    <div className="home-container">
+      <img src={homepic} alt="one" className="header-image" />
+      <div className="home-card-container">
+        <Box className="home-box">
+          <Card variant="outlined" className="home-card">
+            <CardContent>
+              <Typography className="home-box-text">Buy Property?</Typography>
+            </CardContent>
+            <CardActions>
+              <Link to="/buy" className="home-link">
+                CLICK HERE
+              </Link>
+            </CardActions>
+          </Card>
+        </Box>
+        <Box className="home-box">
+          <Card variant="outlined" className="home-card">
+            <CardContent>
+              <Typography className="home-box-text">Rent Property?</Typography>
+            </CardContent>
+            <CardActions>
+              <Link to="/rent" className="home-link">
+                CLICK HERE
+              </Link>
+            </CardActions>
+          </Card>
+        </Box>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
