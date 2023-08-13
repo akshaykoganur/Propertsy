@@ -270,3 +270,13 @@ input:focus{
     margin-bottom: 16px;
   }
 }
+
+.input-group {
+  display: flex;
+}
+
+.input-item {
+  flex: 1;
+  margin-right: 16px; /* Add some space between the items */
+}
+

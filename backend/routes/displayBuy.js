@@ -4,7 +4,7 @@ const sellModel = require('../models/sellPropertyModel')
 
 router.post('/buyData', async(req,res) => {
     try{
-        const buyData = await sellModel.find({city : req.body.city});
+        const buyData = await sellModel.find({city : req.body.city, type: req.body.type});
         //console.log(buyData);
         res.send(buyData);
     }
