@@ -71,6 +71,7 @@ input:focus{
   text-align: center;
   padding: 20px;
   background-color: #f9f9f9; 
+  width: 100vw;
 }
 
 .header-image {
@@ -124,6 +125,14 @@ input:focus{
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .home-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 
 /*Profile page*/
 
@@ -217,4 +226,47 @@ input:focus{
 
 .form-button:hover {
   background-color: #0062cc;
+}
+
+
+/* Styling for the form container */
+.custom-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for input field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styling for submit button */
+.primary-button {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: #1565c0;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide (e.g., tablets and mobile devices) */
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
 }
