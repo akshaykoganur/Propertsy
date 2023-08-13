@@ -280,3 +280,17 @@ input:focus{
   margin-right: 16px; /* Add some space between the items */
 }
 
+
+.custom-form {
+  width: 800px; 
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  .custom-form {
+    width: 100%; 
+    padding: 0 20px; 
+  }
+}
+
+

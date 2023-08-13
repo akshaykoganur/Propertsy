@@ -1,7 +1,4 @@
 import React from 'react'
-//import { useState } from 'react'
-//import Cart from './Cart'
-//import {useDispatchCart, useCart} from'./ContextReducer';
 
 function BuyCard(props) {
   return (

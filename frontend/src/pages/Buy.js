@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import "../index.css";
 import BuyCard from "./BuyCard";
 
@@ -8,9 +7,6 @@ function Buy() {
   const [dat, setMyArray] = useState([]);
   const [city, setCity] = useState('');
   const [type, setType] = useState('');
-  //const clicked = async (e) => {
-  //console.log('Hi');
-  //}
   async function submitData() {
     try {
       let url = "https://propertsy-backend.onrender.com/api/buyData";
@@ -36,9 +32,9 @@ function Buy() {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  const typeChanged = async(e) => {
-    let houseType = e.target.value;
-    setType(houseType);
+  const typeChanged = (value) => {
+    //let houseType = e.target.value;
+    setType(value);
   }
 
   const changed = async (e) => {
@@ -48,31 +44,11 @@ function Buy() {
     setCity(value2);
   }
 
+  const houseTypes = ['1 BHK', '2 BHK', '3 BHK', '4 BHK', '5 BHK', 'Penthouse', 'Villa', 'Bungalow'];
+
+
   return (
     <>
-      {/* <div className="container mb-3 fs-3 m-3">
-        {dat !== [] ? (
-          dat.map((data, idx) => {
-            return (
-              <div key={idx} className="row">
-                <div key={idx} className="col-12 col-md-6 col-lg-3">
-                  <BuyCard buyProperties={data} />
-                </div>
-              </div>
-            );
-          })
-        ) : (
-          <div>**</div>
-        )}
-      </div> */}
-
-      {/*<Form method="POST" layout='vertical' onFinish={submitData}>
-                    <Form.Item label='City' >
-                        <Input name='city' placeholder='City' value={city} onChange={changed} />
-                    </Form.Item>
-    <Button className='primary-button mt-2 mb-2' htmlType='submit'>Submit</Button>
-                     
-    </Form>*/}
 
       <Form method="POST" layout='vertical' onFinish={submitData} className="custom-form">
         <div className="input-group">
@@ -80,7 +56,19 @@ function Buy() {
             <Input name='city' placeholder='Enter city' value={city} onChange={changed} className="input-field" />
           </Form.Item>
           <Form.Item label='Type' className="input-item">
-            <Input name='type' placeholder='Enter house type' value={type} onChange={typeChanged} className="input-field" />
+            <Select
+              name='type'
+              placeholder='Select house type'
+              value={type}
+              onChange={typeChanged}
+              className="input-field"
+            >
+              {houseTypes.map((houseType) => (
+                <Select.Option key={houseType} value={houseType}>
+                  {houseType}
+                </Select.Option>
+              ))}
+            </Select>
           </Form.Item>
         </div>
         <Form.Item>
@@ -89,11 +77,6 @@ function Buy() {
           </Button>
         </Form.Item>
       </Form>
-
-
-
-
-
 
       <div className="container buy mb-3 fs-3 d-flex flex-wrap justify-content-center">
         {dat.length > 0 ? (
@@ -108,8 +91,6 @@ function Buy() {
           </div>
         )}
       </div>
-
-
 
     </>
   );

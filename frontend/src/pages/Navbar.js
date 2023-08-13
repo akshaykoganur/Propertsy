@@ -8,10 +8,10 @@ function Navbar() {
     localStorage.removeItem("userEmail");
     toast.success("Logout Successful");
   };
-  
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
-      <img src={logopic} alt="Logo" style={{maxHeight:"8vh"}}/>
+      <img src={logopic} alt="Logo" style={{ maxHeight: "8vh" }} />
       <button
         className="navbar-toggler"
         type="button"
@@ -27,17 +27,17 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="btn text-secondary" href="/">
+            <a className="btn text-dark" href="/">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a className="btn text-secondary" href="/buy">
+            <a className="btn text-dark" href="/buy">
               Buy
             </a>
           </li>
           <li className="nav-item">
-            <a className="btn text-secondary" href="/rent">
+            <a className="btn text-dark" href="/rent">
               Rent
             </a>
           </li>
@@ -45,7 +45,7 @@ function Navbar() {
 
         {localStorage.getItem("token") ? (
           <div className="d-flex">
-            <a className="btn text-secondary mx-2" href="/profile">
+            <a className="btn text-dark mx-2" href="/profile">
               Profile
             </a>
             <button className="btn text-danger" onClick={logout}>
@@ -57,10 +57,10 @@ function Navbar() {
         )}
         {!localStorage.getItem("token") ? (
           <div className="d-flex">
-            <a className="btn text-secondary mx-2" href="/login">
+            <a className="btn text-dark mx-2" href="/login">
               Login
             </a>
-            <a className="btn text-secondary mx-2" href="/register">
+            <a className="btn text-dark mx-2" href="/register">
               Register
             </a>
           </div>

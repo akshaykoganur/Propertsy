@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-//import books2 from "./images/books2.jpg";
 import "../index.css";
-import BuyCard from "./BuyCard";
+import RentCard from "./RentCard";
 
 function ViewRent() {
     const [dat, setMyArray] = useState([]);
-    //const clicked = async (e) => {
-    //console.log('Hi');
-    //}
     async function getBuyProperties() {
         try {
             let url = "https://propertsy-backend.onrender.com/api/user/yourRentData";
@@ -33,24 +29,20 @@ function ViewRent() {
     }, []);
     return (
         <>
-            <div style={{ alignContent: "center", alignItems: "center" }}>
-                <h1>Total {dat.length} properties listed for sell</h1>
-            </div>
-
-            <div className="container buy mb-3 fs-3 d-flex flex-wrap">
-                {dat !== [] ? (
-                    dat.map((data, idx) => {
-                        return (
-                            <div key={idx} className="col-12 col-md-6 col-lg-3 mx-5">
-                                <BuyCard buyProperties={data} />
-                            </div>
-                        );
-                    })
+            <div className="container buy mb-3 fs-3 d-flex flex-wrap justify-content-center">
+                <h1>You have listed {dat.length} properties</h1>
+                {dat.length > 0 ? (
+                    dat.map((data, idx) => (
+                        <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4 d-flex justify-content-center">
+                            <RentCard rentProperties={data} />
+                        </div>
+                    ))
                 ) : (
-                    <div>**</div>
+                    <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+                        No Properties listed by you
+                    </div>
                 )}
             </div>
-
         </>
     );
 }

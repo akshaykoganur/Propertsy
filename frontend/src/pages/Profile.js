@@ -6,9 +6,6 @@ import "../index.css";
 
 function Profile() {
   const [dat, setMyArray] = useState([]);
-  //const clicked = async (e) => {
-  //console.log('Hi');
-  //}
   async function getProfile() {
     try {
       let url = "https://propertsy-backend.onrender.com/api/user/profile";

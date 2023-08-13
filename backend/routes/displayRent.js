@@ -4,8 +4,7 @@ const rentModel = require('../models/rentPropertyModel')
 
 router.get('/rentData', async(req,res) => {
     try{
-        const buyData = await sellModel.find({city : req.body.city});
-        //console.log(buyData);
+        const buyData = await rentModel.find({city : req.body.city, type: req.body.type});
         res.send(rentData);
     }
     catch(error){
