@@ -16,7 +16,7 @@ MongoDB.
 - To enable seamless communication between the client application and the server‑side, the system employs a robust REST API.
 - To ensure the reliability and accuracy of the backend, the system utilizes Supertest for API testing.
 
-## Tech Stack:
+## Technologies used:
 - React.js, Bootstrap, Material UI (Frontend)
 - Express.js, Node.js (Backend)
 - Supertest, Postman (Testing backend)
