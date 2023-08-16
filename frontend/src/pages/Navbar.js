@@ -32,6 +32,11 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
+            <a className="btn text-dark" href="/hostel">
+              Hostel
+            </a>
+          </li>
+          <li className="nav-item">
             <a className="btn text-dark" href="/buy">
               Buy
             </a>
