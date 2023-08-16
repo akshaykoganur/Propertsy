@@ -6,7 +6,7 @@ function BuyCard(props) {
         
         <div className="card-body align-text-center">
         <h5 className="card-title" style={{textAlign: 'center'}}>{props.buyProperties.type}<span>, {props.buyProperties.name}</span></h5>
-            <img src={props.buyProperties.image} alt={""} width="230px" height="200px" />
+            <img src={props.buyProperties.image} alt={""} width="100%" height="50%" />
             <h5 className="card-title">Rs. {props.buyProperties.price}</h5>
             <h5 className="card-title">{props.buyProperties.city}</h5>
             <h6 className="card-title">{props.buyProperties.street}<span>, {props.buyProperties.locality}</span></h6>

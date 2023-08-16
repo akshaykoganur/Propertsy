@@ -57,6 +57,18 @@ function Profile() {
         </div>
         <div className='profileflex'>
           <div className='profileroutes'>
+            <Link to='/submitHostel'>
+              Enroll Hostel
+            </Link>
+          </div>
+          <div className='profileroutes'>
+            <Link to='/viewHostel'>
+              View Enrolled Hostel
+            </Link>
+          </div>
+        </div>
+        <div className='profileflex'>
+          <div className='profileroutes'>
             <Link to='/viewSell'>
               View Your Properties for Sell
             </Link>

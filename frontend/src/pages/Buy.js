@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Form, Input, Button, Select } from 'antd';
 import "../index.css";
 import BuyCard from "./BuyCard";
+import LoadingSpinner from './LoadingSpinner';
 
 function Buy() {
   const [dat, setMyArray] = useState([]);
   const [city, setCity] = useState('');
   const [type, setType] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   async function submitData() {
     try {
+      setIsLoading(true);
       let url = "https://propertsy-backend.onrender.com/api/buyData";
       let res = await fetch(url, {
         method: "POST",
@@ -23,8 +26,10 @@ function Buy() {
       let data = await res.json();
       console.log(data);
       setMyArray(data);
+      setIsLoading(false);
     } catch (err) {
       console.error(err);
+      setIsLoading(false);
     }
   }
 
@@ -79,7 +84,7 @@ function Buy() {
       </Form>
 
       <div className="container buy mb-3 fs-3 d-flex flex-wrap justify-content-center">
-        {dat.length > 0 ? (
+      {isLoading ? <LoadingSpinner /> : dat.length > 0 ? (
           dat.map((data, idx) => (
             <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4 d-flex justify-content-center">
               <BuyCard buyProperties={data} />
