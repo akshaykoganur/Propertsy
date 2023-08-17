@@ -3,12 +3,26 @@ import { Form, Input, Button, Select } from 'antd';
 import "../index.css";
 import HostelCard from "./HostelCard";
 import LoadingSpinner from './LoadingSpinner';
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function Hostel() {
+  const navigate = useNavigate();
+  
   const [dat, setMyArray] = useState([]);
   const [city, setCity] = useState('');
   const [type, setType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const email = localStorage.getItem("userEmail");
+  if (!email) {
+    toast('Kindly log in to your account', { autoClose: 4000 }, {toastId: 'warn1',});
+    setTimeout(function() {navigate('../login')}, 4000);
+    //return <Navigate replace to="/login" />;
+  }
+
   async function submitData() {
     try {
       setIsLoading(true);
@@ -54,7 +68,7 @@ function Hostel() {
 
   return (
     <>
-
+      <ToastContainer limit={1}/>
       <Form method="POST" layout='vertical' onFinish={submitData} className="custom-form">
         <div className="input-group">
           <Form.Item label='City' className="input-item">

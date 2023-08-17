@@ -10,6 +10,7 @@ function Navbar() {
   };
 
   return (
+    <>
     <nav className="navbar navbar-expand-lg navbar-light bg-info pb-3 pr-1">
       <img src={logopic} alt="Logo" style={{ maxHeight: "8vh" }} />
       <button
@@ -74,6 +75,7 @@ function Navbar() {
         )}
       </div>
     </nav>
+    </>
   );
 }
 
