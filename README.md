@@ -26,19 +26,19 @@ MongoDB.
 
 ## Screenshots:
 ### Login Page:
-![Screenshot (99)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy1.png)
+![Screenshot (99)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy1.png)
 
 ### Register Page:
-![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy2.png)
+![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy2.png)
 
 ### Home Page:
-![Screenshot (102)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy3.png)
+![Screenshot (102)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy3.png)
 
 ### Buy Page:
-![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy4.png)
+![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy4.png)
 
 ### Rent Page:
-![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy5.png)
+![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy5.png)
 
 ### Profile Page:
-![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/screenshots/propertsy6.png)
+![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy6.png)
