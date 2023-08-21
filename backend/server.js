@@ -20,6 +20,9 @@ app.use('/api', sellRoute);
 const rentRoute = require('./routes/rentRoute');
 app.use('/api', rentRoute);
 
+const hostelRoute = require('./routes/hostelRoute');
+app.use('/api', hostelRoute);
+
 app.use('/api', displayBuy);
 
 app.use('/api', displayRent);
