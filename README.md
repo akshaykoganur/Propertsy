@@ -42,3 +42,8 @@ MongoDB.
 
 ### Profile Page:
 ![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy6.png)
+
+## Contributors
+- <a href="https://github.com/akshaykoganur">Akshay Koganur</a>
+- <a href="https://github.com/Omickeyee">Omkar Khade</a>
+- <a href="https://github.com/Avi8010">Avinash Maharnavar</a>
