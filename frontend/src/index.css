@@ -229,15 +229,7 @@ input:focus{
 }
 
 
-/* Styling for the form container */
-.custom-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Styling for input field */
 .input-field {
@@ -281,10 +273,6 @@ input:focus{
 }
 
 
-.custom-form {
-  width: 800px; 
-  margin: 0 auto; 
-}
 
 @media (max-width: 768px) {
   .custom-form {
@@ -321,5 +309,22 @@ input:focus{
   align-items: center;
   height: 350px;
 }
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%; 
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; 
+}
+
 
 
