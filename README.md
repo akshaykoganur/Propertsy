@@ -21,6 +21,7 @@ MongoDB.
 - Express.js, Node.js (Backend)
 - Supertest, Postman (Testing backend)
 - MongoDB (Database)
+- Docker (Containerization)
 - Netlify, AWS Amplify (Hosting frontend)
 - Render (Hosting backend)
 
