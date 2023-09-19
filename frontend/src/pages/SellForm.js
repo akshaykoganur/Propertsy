@@ -1,12 +1,12 @@
 import { Button, Form, Input } from "antd";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function SellForm() {
 
-  const [credentials, setCredentials] = useState({ name: "", type:"", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
+  const [credentials, setCredentials] = useState({ name: "", type: "", image: "", price: "", age: "", street: "", locality: "", city: "", ownerName: "", ownerContact: "", ownerEmail: "" });
 
 
   const navigate = useNavigate();
@@ -26,37 +26,40 @@ function SellForm() {
     }
   };
 
-  const onChange = async(e) => {
-    if(e.target.name === 'image'){
+  const onChange = async (e) => {
+    if (e.target.name === 'image') {
       const file = e.target.files[0];
-      const base64 = await convertToBase64(file);
-      console.log(base64)
-      //console.log(e.target.value)
-      setCredentials({ ...credentials, image: base64 })
+      const dataArray = new FormData();
+      dataArray.append("file", file);
+      dataArray.append("upload_preset", "trial1");
+      dataArray.append("cloud_name", "dhqtrt7px");
+      try {
+        const response = await fetch(`https://api.cloudinary.com/v1_1/dhqtrt7px/image/upload`, {
+          method: 'POST',
+          body: dataArray
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setCredentials({ ...credentials, image: data.url })
+          console.log('Image uploaded successfully:', data);
+        } else {
+          console.error('Error uploading image:', response.statusText);
+        }
+      } catch (error) {
+        console.error('An error occurred during the image upload:', error);
+      }
     }
-    else{
-      //console.log(e.target.value)
+    else {
       setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
-    //console.log(credentials.image)
+
   }
 
-  function convertToBase64(file) {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-      fileReader.onload = () => {
-        resolve(fileReader.result)
-      };
-      fileReader.onerror = (error) => {
-        reject(error)
-      }
-    })
-  }
 
   return (
-    
-      <div className="card p-3">
+
+    <div className="card p-3">
       <Form layout="vertical" onFinish={onFinish}>
         <Form.Item label="Name" name="name">
           <Input placeholder="Name" name='name' value={credentials.name} onChange={onChange} />
@@ -102,11 +105,11 @@ function SellForm() {
           Submit
         </Button>
 
-        
+
 
       </Form>
-      </div>
-    
+    </div>
+
   )
 }
 
