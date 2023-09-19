@@ -14,6 +14,7 @@ import ViewRent from "./pages/ViewRent";
 import ViewHostel from "./pages/ViewHostel";
 import Profile from "./pages/Profile";
 import Hostel from "./pages/Hostel";
+import ViewBuyProperties from "./pages/ViewBuyProperties";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/viewSell" element={<ViewSell />} />
           <Route path="/viewRent" element={<ViewRent />} />
           <Route path="/viewHostel" element={<ViewHostel />} />
+          <Route path="/viewBuyProperty" element={<ViewBuyProperties />} />
         </Routes>
       </BrowserRouter>
   );

@@ -26,6 +26,12 @@ function Buy() {
       let data = await res.json();
       console.log(data);
       setMyArray(data);
+
+      var pos = 0;
+      for(pos=0;pos<data.length;pos++){
+        sessionStorage.setItem(data[pos]._id, JSON.stringify(data[pos]));
+      }
+
       setIsLoading(false);
     } catch (err) {
       console.error(err);
@@ -36,6 +42,7 @@ function Buy() {
   function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
 
   const typeChanged = (value) => {
     //let houseType = e.target.value;
