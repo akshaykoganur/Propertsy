@@ -71,16 +71,18 @@ function Hostel() {
       <ToastContainer limit={1}/>
       <Form method="POST" layout='vertical' onFinish={submitData} className="custom-form">
         <div className="input-group">
-          <Form.Item label='City' className="input-item">
+        <Form.Item label='Locality' className="input-item mx-3">
+            <Input name='locality' placeholder='Enter Locality' className="input-field" />
+          </Form.Item>
+          <Form.Item label='City' className="input-item mx-3">
             <Input name='city' placeholder='Enter city' value={city} onChange={changed} className="input-field" />
           </Form.Item>
-          <Form.Item label='Type' className="input-item">
+          <Form.Item label='Type' className="input-item mx-3">
             <Select
               name='type'
               placeholder='Select house type'
               value={type}
               onChange={typeChanged}
-              className="input-field"
             >
               {houseTypes.map((houseType) => (
                 <Select.Option key={houseType} value={houseType}>
