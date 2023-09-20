@@ -28,7 +28,7 @@ function Buy() {
       setMyArray(data);
 
       var pos = 0;
-      for(pos=0;pos<data.length;pos++){
+      for (pos = 0; pos < data.length; pos++) {
         sessionStorage.setItem(data[pos]._id, JSON.stringify(data[pos]));
       }
 
@@ -62,18 +62,20 @@ function Buy() {
   return (
     <>
 
-      <Form method="POST" layout='vertical' onFinish={submitData} className="custom-form">
+      <Form method="POST" layout='vertical' onFinish={submitData} className="custom-form" style={{ margin: "none" }}>
         <div className="input-group">
-          <Form.Item label='City' className="input-item">
+          <Form.Item label='Locality' className="input-item mx-3">
+            <Input name='locality' placeholder='Enter Locality' className="input-field" />
+          </Form.Item>
+          <Form.Item label='City' className="input-item mx-3">
             <Input name='city' placeholder='Enter city' value={city} onChange={changed} className="input-field" />
           </Form.Item>
-          <Form.Item label='Type' className="input-item">
+          <Form.Item label='Type' className="input-item mx-3">
             <Select
               name='type'
               placeholder='Select house type'
               value={type}
               onChange={typeChanged}
-              className="input-field"
             >
               {houseTypes.map((houseType) => (
                 <Select.Option key={houseType} value={houseType}>
@@ -91,7 +93,7 @@ function Buy() {
       </Form>
 
       <div className="container buy mb-3 fs-3 d-flex flex-wrap justify-content-center">
-      {isLoading ? <LoadingSpinner /> : dat.length > 0 ? (
+        {isLoading ? <LoadingSpinner /> : dat.length > 0 ? (
           dat.map((data, idx) => (
             <div key={idx} className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4 d-flex justify-content-center">
               <BuyCard buyProperties={data} />

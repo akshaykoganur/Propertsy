@@ -276,7 +276,7 @@ input:focus{
 
 @media (max-width: 768px) {
   .custom-form {
-    width: 100%; 
+    width: 100vw; 
     padding: 0 20px; 
   }
 }
@@ -315,7 +315,8 @@ input:focus{
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 100%; 
+  width: 100vw; 
+  background-color: #E6E6FA;
 }
 
 
