@@ -8,7 +8,7 @@ function Profile() {
   const [dat, setMyArray] = useState([]);
   async function getProfile() {
     try {
-      let url = "https://propertsy-backend.onrender.com/api/user/profile";
+      let url = "";
       const email = localStorage.getItem("userEmail");
       let res = await fetch(url, {
         method: "POST",
