@@ -10,7 +10,7 @@ function Rent() {
 
   async function submitData() {
     try {
-      let url = "https://propertsy-backend.onrender.com/api/rentData";
+      let url = "";
       let res = await fetch(url, {
         method: "POST",
         headers: {
