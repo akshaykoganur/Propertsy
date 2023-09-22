@@ -6,7 +6,7 @@ function ViewSell() {
   const [dat, setMyArray] = useState([]);
   async function getBuyProperties() {
     try {
-      let url = "https://propertsy-backend.onrender.com/api/user/yourSellData";
+      let url = "";
       const ownerEmail = localStorage.getItem("userEmail");
       let res = await fetch(url, {
         method: "POST",
