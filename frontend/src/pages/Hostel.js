@@ -26,7 +26,7 @@ function Hostel() {
   async function submitData() {
     try {
       setIsLoading(true);
-      let url = "https://propertsy-backend.onrender.com/api/hostelData";
+      let url = "";
       let res = await fetch(url, {
         method: "POST",
         headers: {
