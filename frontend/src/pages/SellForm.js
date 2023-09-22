@@ -13,7 +13,7 @@ function SellForm() {
   const onFinish = async () => {
     try {
       console.log(credentials);
-      const response = await axios.post("https://propertsy-backend.onrender.com/api/sell", credentials);
+      const response = await axios.post("", credentials);
       //console.log(values);
       if (response.data.success) {
         navigate("/profile");
@@ -31,10 +31,10 @@ function SellForm() {
       const file = e.target.files[0];
       const dataArray = new FormData();
       dataArray.append("file", file);
-      dataArray.append("upload_preset", "trial1");
-      dataArray.append("cloud_name", "dhqtrt7px");
+      dataArray.append("upload_preset", "");
+      dataArray.append("cloud_name", "");
       try {
-        const response = await fetch(`https://api.cloudinary.com/v1_1/dhqtrt7px/image/upload`, {
+        const response = await fetch(`https://api.cloudinary.com/v1_1/{}/image/upload`, {
           method: 'POST',
           body: dataArray
         });
