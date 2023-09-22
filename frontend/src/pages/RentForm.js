@@ -13,7 +13,7 @@ function SellForm() {
   const onFinish = async () => {
     try {
       console.log(credentials);
-      const response = await axios.post("https://propertsy-backend.onrender.com/api/rent", credentials);
+      const response = await axios.post("", credentials);
       //console.log(values);
       if (response.data.success) {
         navigate("/profile");
