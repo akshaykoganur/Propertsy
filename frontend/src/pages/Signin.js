@@ -9,7 +9,7 @@ function Signin() {
   const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
-      const response = await axios.post("https://propertsy-backend.onrender.com/api/user/login", values);
+      const response = await axios.post("", values);
       if (response.data.success) {
         toast.success(response.data.message);
         localStorage.setItem("token", response.data.data);
