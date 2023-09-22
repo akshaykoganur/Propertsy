@@ -12,7 +12,7 @@ function HostelForm() {
         try {
             //console.log(credentials);
             
-            const res = await axios.post("http://localhost:5000/api/hostel", credentials);
+            const res = await axios.post("", credentials);
             //console.log(values);
             if (res.data.success) {
                 toast("Succeesful");
