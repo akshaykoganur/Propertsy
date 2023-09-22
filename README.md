@@ -39,7 +39,7 @@ MongoDB.
 ![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy4.png)
 
 ### Rent Page:
-![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy5.png)
+![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy7.png)
 
 ### Profile Page:
 ![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy6.png)
