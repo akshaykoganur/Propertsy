@@ -19,7 +19,7 @@ function Hostel() {
   const email = localStorage.getItem("userEmail");
   if (!email) {
     toast('Kindly log in to your account', { autoClose: 4000 }, {toastId: 'warn1',});
-    setTimeout(function() {navigate('../login')}, 4000);
+    setTimeout(function() {navigate('../login')}, 5000);
     //return <Navigate replace to="/login" />;
   }
 
