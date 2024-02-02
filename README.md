@@ -20,9 +20,9 @@ MongoDB.
 - React.js, Bootstrap, Material UI (Frontend)
 - Express.js, Node.js (Backend)
 - Supertest, Postman (Testing backend)
-- MongoDB (Database)
+- PostgreSQL (Database)
 - Docker (Containerization)
-- Netlify, AWS Amplify (Hosting frontend)
+- Netlify (Hosting frontend)
 - Render (Hosting backend)
 
 ## Screenshots:
