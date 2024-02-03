@@ -4,7 +4,7 @@ const sellModel = require('../models/sellPropertyModel')
 
 router.post('/yourSellData', async(req,res) => {
     try {
-        const yourSellData = await sellModel.find({ ownerEmail: req.body.ownerEmail });
+        const yourSellData = await prisma.sell.findMany({ ownerEmail: req.body.ownerEmail });
         //user.password = undefined;
         if (!yourSellData) {
           return res({ message: "No properties listed for sell", success: false });
