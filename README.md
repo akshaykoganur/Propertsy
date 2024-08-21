@@ -23,7 +23,7 @@ MongoDB.
 - PostgreSQL (Database)
 - Docker (Containerization)
 - Netlify (Hosting frontend)
-- Render (Hosting backend)
+- Render (Hosting backend and database)
 
 ## Screenshots:
 ### Login Page:
@@ -38,7 +38,7 @@ MongoDB.
 ### Buy Page:
 ![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy4.png)
 
-### Rent Page:
+### House Details Page:
 ![Screenshot (101)](https://github.com/akshaykoganur/Propertsy/blob/master/screenshots/propertsy7.png)
 
 ### Profile Page:
